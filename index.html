@@ -8,8 +8,10 @@
   <body>
     <script src="./captcha.js"></script>
     <script>
-      const randomNumber = `${Math.round(Math.random()*1000)*123456}`.substr(0, 9);
-      generateCaptcha(document.body, randomNumber);
+      let num = Math.random().toString().substr(2, 6);
+      if (num.length < 6) num = `${parseInt(num) + 100000}`;
+      
+      generateCaptcha(document.body, num);
     </script>
   </body>
 </html>
