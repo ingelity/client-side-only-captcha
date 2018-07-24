@@ -1,4 +1,4 @@
-export function generateCaptcha(parent, code, width = 200, height = 100, font = '30px Arial') {
+function generateCaptcha(parent, code, width = 200, height = 100, font = '30px Arial') {
   const canvas = document.createElement('canvas');
   canvas.width = width;
   canvas.height = height;
